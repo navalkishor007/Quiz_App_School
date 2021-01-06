@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'quiz/base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz exam</title>
+</head>
+<body>
+{%block child_block%}
+{%if post_list%}
+{%for post in post_list%}
+<form method="post">
+    {%csrf_token%}
+    <p>Question{{post.id}}: {{post.question}}</p>
+    <div class="options">
+        <p>A) {{post.option_1}} <input name="{{post.id}}" value="{{post.option_1}}" type="radio"></p>
+        <p>B) {{post.option_2}} <input name="{{post.id}}" value="{{post.option_2}}" type="radio"></p>
+        <p>C) {{post.option_3}} <input name="{{post.id}}" value="{{post.option_3}}" type="radio"></p>
+        <p>D) {{post.option_4}} <input name="{{post.id}}" value="{{post.option_4}}" type="radio"></p>
+        {%for message in messages%}
+        <h1>{{message}}</h1>
+        {%endfor%}
+    </div>
+    <input type="submit">
+</form>
+
+{%endfor%}
+{%else%}
+<h1>No Exam present yet!</h1>
+{%endif%}
+{%endblock%}
+</body>
+</html>

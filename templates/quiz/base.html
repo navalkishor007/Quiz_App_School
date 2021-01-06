@@ -28,20 +28,25 @@
         </ul>
     </div>
 
-{%block child_block%}
-<div class="container px-4">
-  <div class="row gx-5">
-    <div class="col">
-     <div class="p-3 border bg-light" align="center">
-         <button type="button" class="btn btn-outline-primary" >Primary</button>
-     </div>
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light" align="center">
-          <button type="button" class="btn btn-outline-primary">Primary</button>
+
+<div class="container" align="center">
+  <div class="jumbotron">
+  <h1 class="display-4">The Nucleus Schools</h1>
+      {%block child_block%}
+  <p class="lead">This is a simple exam portal, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+      <div class="rules">
+            <p>Rules for exam...</p>
+          <p>this is dummy rule to test the working of site this is first rule...</p>
+          <p>this is dummy rule to test the working of site this is second rule...</p>
+          <p>this is dummy rule to test the working of site this is third rule...</p>
+          <p>this is dummy rule to test the working of site this is fourth rule...</p>
+          <p>this is dummy rule to test the working of site this is fifth rule...</p>
       </div>
-    </div>
-  </div>
+  <p class="lead" align="center">
+    <a class="btn btn-primary btn-lg" href="/exam/" role="button">Start Exam</a>
+  </p>
+</div>
 </div>
 {%endblock%}
 

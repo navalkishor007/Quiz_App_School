@@ -3,7 +3,9 @@ background-color:#fff2cc;
 position: fixed;
 margin: 10% 10% 10% 15%;
 }
-
+.rules{
+float:left;
+}
 body{
 background-color:#ffe6e6;
 }
